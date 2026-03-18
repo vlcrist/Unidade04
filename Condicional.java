@@ -12,5 +12,7 @@ public class Condicional {
             System.out.println("Não pode dirigir criança!");
         }
         System.out.println("Fim da condicional!");
+
+        sc.close();
     }
 }
