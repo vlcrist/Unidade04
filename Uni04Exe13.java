@@ -1,17 +1,32 @@
 import java.util.Scanner;
-import java.util.Random;
 
 public class Uni04Exe13 {
     public static void main(String[] args) {
-        Random random = new Random();
         Scanner sc = new Scanner(System.in);
-        
-        int carta_random_1 = random.nextInt(1, 12);
-        int carta_random_2 = random.nextInt(1, 12);
-        int carta_random_3 = random.nextInt(1, 12);
+        System.out.println("Insira as 3 cartas do truco:");
+        int carta_1 = sc.nextInt();
+        int carta_2 = sc.nextInt();
+        int carta_3 = sc.nextInt();
+        int nr_cartas_boas = 0;
 
-        System.out.println("Primeira carta: " + carta_random_1 + "\nSegunda carta: " + carta_random_2 + "\nTerceira Carta: " + carta_random_3);
+        if ((carta_1 == 1) || ((carta_1 == 2)) || (carta_1 == 3)) {
+            nr_cartas_boas += 1;
+        };
+        if ((carta_2 == 1) || ((carta_2 == 2)) || (carta_2 == 3)) {
+            nr_cartas_boas = nr_cartas_boas + 1;
+        }
+        if ((carta_3 == 1) || ((carta_3 == 2)) || (carta_3 == 3)) {
+            nr_cartas_boas++;
+        }
+        if (nr_cartas_boas == 1) {
+            System.out.println("TRUCO");
+        } else if (nr_cartas_boas == 2) {
+            System.out.println("SEIS");
+        } else if (nr_cartas_boas == 3) {
+            System.out.println("NOVE");
+        } else {
 
+        };
         sc.close();
     }
 }
