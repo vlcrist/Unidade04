@@ -29,12 +29,12 @@ public class Uni04Exe27 {
 
         if (tempoTotal <= 89) {
             System.out.println("Preço cobrado = R$" + vl_1_2_horas);
-        } else if (tempoTotal >= 90 && tempoTotal <= 149) {
+        } else if (tempoTotal >= 90 && tempoTotal <= 179) {
             System.out.println("Preço cobrado = R$" + vl_1_2_horas * 2); 
-        } else if (tempoTotal >= 150 && tempoTotal <= 209) {
+        } else if (tempoTotal >= 180 && tempoTotal <= 269) {
             System.out.println("Preço cobrado = R$" + vl_3_4_horas * 3);
-        } else if (tempoTotal >= 210 && tempoTotal <= 269) {
-            System.out.println("Preço cobraod = R$" + vl_3_4_horas * 4);
+        } else if (tempoTotal >= 270 && tempoTotal <= 359) {
+            System.out.println("Preço cobrado = R$" + vl_3_4_horas * 4);
         } else {
             int tempoSubsequente = tempoTotal / 60;
             System.out.println(tempoSubsequente);
