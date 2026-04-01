@@ -1,3 +1,16 @@
+/*
+__Enunciado:
+
+__Análise:
+
+//___Gordura:
+
+//___Entradas:
+
+//___Processos:
+
+//___Saídas:
+*/
 import java.util.Scanner;
 
 public class Uni04Exe27 {
@@ -27,19 +40,34 @@ public class Uni04Exe27 {
         int tempoTotal = ((hr_saida * 60) + min_saida) - ((hr_chegada * 60) + min_chegada);
         System.out.println(tempoTotal);
 
-        if (tempoTotal <= 89) {
-            System.out.println("Preço cobrado = R$" + vl_1_2_horas);
-        } else if (tempoTotal >= 90 && tempoTotal <= 179) {
-            System.out.println("Preço cobrado = R$" + vl_1_2_horas * 2); 
-        } else if (tempoTotal >= 180 && tempoTotal <= 269) {
-            System.out.println("Preço cobrado = R$" + vl_3_4_horas * 3);
-        } else if (tempoTotal >= 270 && tempoTotal <= 359) {
-            System.out.println("Preço cobrado = R$" + vl_3_4_horas * 4);
+        int nr_horas;
+
+        if (tempoTotal <= 30) {
+            nr_horas = 1;
         } else {
-            int tempoSubsequente = tempoTotal / 60;
-            System.out.println(tempoSubsequente);
-            System.out.println("Preço cobrado = R$" + vl_5_horas * tempoSubsequente);
+            nr_horas = tempoTotal / 60;
+            int resto_horas = tempoTotal % 60;
+            
+            if (resto_horas >= 30) {
+            nr_horas = nr_horas + 1;
+            }
         }
+        double vl_preco;
+        
+
+        if (nr_horas == 1) {
+            vl_preco = vl_1_2_horas;
+        } else if (nr_horas == 2) {
+            vl_preco = vl_1_2_horas * 2; 
+        } else if (nr_horas == 3) {
+            vl_preco = (vl_1_2_horas * 2) + vl_3_4_horas;
+        } else if (nr_horas == 4) {
+            vl_preco = (vl_1_2_horas * 2) + (vl_3_4_horas * 2);
+        } else {
+            vl_preco = (vl_1_2_horas * 2) + (vl_3_4_horas * 2) + ((nr_horas - 4) * vl_5_horas);
+        }
+    System.out.println("O preço cobrado = R$" + vl_preco);
+    
     sc.close();
     }
 }

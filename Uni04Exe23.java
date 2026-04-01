@@ -1,3 +1,16 @@
+/*
+__Enunciado:
+
+__Análise:
+
+//___Gordura:
+
+//___Entradas:
+
+//___Processos:
+
+//___Saídas:
+*/
 import java.util.Scanner;
 
 public class Uni04Exe23 {
