@@ -1,39 +1,53 @@
 /*
 __Enunciado:
 
-__Análise:
+Dados 3 valores, escreva um algoritmo que os informe em 
+uma determinada ordem a partir de um menu de opções:
+
+se opção = 1, escreva os 3 valores em ordem crescente
+se opção = 2, escreva os 3 valores em ordem decrescente
+se opção = 3, escreva os 3 valores de forma que o maior 
+valor fique no meio
+
+__Análise: OK
 
 //___Gordura:
 
+escreva um algoritmo que
+
 //___Entradas:
+
+ler(nr_valor1, nr_valor2, nr_valor3, nr_escolha)
 
 //___Processos:
 
+definir maior, meio e menor
+
+caso (nr_escolha == 1) então crescente
+caso (nr_escolha == 2) então decrescente
+caso (nr_escolha == 3) então maior no meio
+
 //___Saídas:
+
+imprimir(valores ordenados)
+
 */
+
 import java.util.Scanner;
 
 public class Uni04Exe24 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Bem Vindo ao programa de escolha de ordenação de números");
 
-        System.out.println("Insira o primeiro valor:");
+        // Variáveis e Entradas:
         int nr_valor1 = sc.nextInt();
-
-        System.out.println("Insira o segundo valor:");
         int nr_valor2 = sc.nextInt();
-
-        System.out.println("Insira o terceiro valor:");
         int nr_valor3 = sc.nextInt();
-        
-        System.out.println("Insira um número para ordenação: \nOpção 1: Valores em ordem crescente \nOpção 2: Valores em ordem decrescente \nOpção 3: Valor maior no meio");
         int nr_escolha = sc.nextInt();
 
-        int nr_maior;
-        int nr_meio;
-        int nr_menor;
+        int nr_maior, nr_meio, nr_menor;
 
+        // Processos:
         if (nr_valor1 > nr_valor2 && nr_valor1 > nr_valor3) {
             nr_maior = nr_valor1;
             if (nr_valor2 > nr_valor3) {
@@ -43,7 +57,6 @@ public class Uni04Exe24 {
                 nr_meio = nr_valor3;
                 nr_menor = nr_valor2;
             }
-
         } else if (nr_valor2 > nr_valor1 && nr_valor2 > nr_valor3) {
             nr_maior = nr_valor2;
             if (nr_valor1 > nr_valor3) {
@@ -64,22 +77,43 @@ public class Uni04Exe24 {
             }
         }
 
+        // Processos E Saídas:
         switch (nr_escolha) {
         case 1:
-            System.out.println(nr_maior + " " + nr_meio + " " + nr_menor);    
-            break;
-    
-        case 2:
             System.out.println(nr_menor + " " + nr_meio + " " + nr_maior);
             break;
-        
+        case 2:
+            System.out.println(nr_maior + " " + nr_meio + " " + nr_menor);
+            break;
         case 3:
             System.out.println(nr_meio + " " + nr_maior + " " + nr_menor);
             break;
-        
-        default:
-        
         }
+
         sc.close();
     }
 }
+
+/*
+Valores de teste:
+__ Caso 01 ___
+nr_valor1 = 5
+nr_valor2 = 3
+nr_valor3 = 2
+nr_escolha = 1
+imprimir("2 3 5")
+
+__ Caso 02 ___
+nr_valor1 = 5
+nr_valor2 = 3
+nr_valor3 = 2
+nr_escolha = 2
+imprimir("5 3 2")
+
+__ Caso 03 ___
+nr_valor1 = 5
+nr_valor2 = 3
+nr_valor3 = 2
+nr_escolha = 3
+imprimir("3 5 2")
+*/
