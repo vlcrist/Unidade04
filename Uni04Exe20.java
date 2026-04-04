@@ -78,10 +78,8 @@ public class Uni04Exe20 {
             ds_conceito = 'C';
         } else if (vl_media_aproveitamento >= 4.0 && vl_media_aproveitamento < 6.0) {
             ds_conceito = 'D'; 
-        } else if (vl_media_aproveitamento < 4.0) {
+        } else  {
             ds_conceito = 'E';
-        } else {
-            ds_conceito = 'X';
         }
         
         if (ds_conceito == 'D' || ds_conceito == 'E') {

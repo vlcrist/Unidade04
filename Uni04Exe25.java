@@ -37,7 +37,7 @@ import java.util.Scanner;
 public class Uni04Exe25 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        System.out.println("Escolha uma opção:\r\n1 - Soma de dois números.\r\n2 - Diferença entre dois números.\r\n3 - Produto entre dois números.\r\n4 - Divisão entre dois números (o denominador não pode ser zero).");
         // Variáveis e Entradas:
         int vl_1 = sc.nextInt();
         int vl_2 = sc.nextInt();

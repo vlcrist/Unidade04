@@ -39,6 +39,9 @@ public class Uni04Exe24 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Insira 3 valores inteiros e uma escolha (1, 2 ou 3): \r\n1 - Os 3 valores em ordem crescente\r\n" + 
+                        "2 - Os 3 valores em ordem decrescente\r\n" +
+                        "3 - Os 3 valores com o maior no meio");
         // Variáveis e Entradas:
         int nr_valor1 = sc.nextInt();
         int nr_valor2 = sc.nextInt();

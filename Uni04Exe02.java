@@ -6,24 +6,26 @@ informe se o valor é par ou ímpar.
 __Análise: OK
 
 //___Gordura:
+
 *null*
 
 //___Entradas:
 
 ler(nr_inteiro)
 
+
 //___Processos:
 
-se (nr_inteiro %2 == 0) {
-     System.out.println("O número é par");
-} se não {
-    System.out.println("O número é impar");
-}
+se (nr_inteiro % 2 == 0) então
+    imprimir("O número é par")
+senão
+    imprimir("O número é impar")
 
-//___Saídas: resultado da condição
+
+//___Saídas: 
 
 imprimir("O número é par") 
-OU
+ou
 imprimir("O número é impar")
 
 */

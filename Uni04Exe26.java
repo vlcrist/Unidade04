@@ -37,6 +37,11 @@ public class Uni04Exe26 {
         Scanner sc = new Scanner(System.in);
 
         // Variáveis e Entradas:
+        System.out.println("Insira uma opção (T, Q, R ou C) para calcular a área de uma figura geométrica:\r\n" + 
+                        "T - Triângulo\r\n" + 
+                        "Q - Quadrado\r\n" + 
+                        "R - Retângulo\r\n" + 
+                        "C - Círculo");
         char ds_opcao = sc.next().toUpperCase().charAt(0);
 
         double vl_base, vl_altura, vl_lado, vl_raio;

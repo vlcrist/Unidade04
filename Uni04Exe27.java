@@ -56,7 +56,7 @@ import java.util.Scanner;
 public class Uni04Exe27 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        System.out.println("Insira o horário de chegada (hora e minuto) e o horário de saída (hora e minuto):");
         // Variáveis e Entradas:
         double vl_1_2_horas = 5.0;
         double vl_3_4_horas = 7.5;
